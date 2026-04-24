@@ -1,0 +1,18 @@
+{
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  // "tailwindCSS.experimental.configFile": {
+  //   "apps/lms/src/app/globals.css": ["apps/lms/**"],
+  //   "apps/sms/src/app/globals.css": ["apps/sms/**"],
+  //   "apps/sso/src/app/globals.css": ["apps/sso/**"],
+  //   "packages/ui/src/styles.css": ["packages/ui/**"]
+  // }
+}

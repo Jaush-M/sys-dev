@@ -1,0 +1,57 @@
+{
+  "name": "sso",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf node_modules .next .turbo .vercel",
+    "db:generate": "bun run drizzle-kit generate",
+    "db:migrate": "bun run drizzle-kit migrate",
+    "db:push": "bun run drizzle-kit push",
+    "db:studio": "bun run drizzle-kit studio"
+  },
+  "dependencies": {
+    "@better-auth/oauth-provider": "^1.6.7",
+    "@t3-oss/env-nextjs": "^0.13.11",
+    "@tanstack/react-form": "^1.29.1",
+    "@tanstack/react-query": "^5.99.2",
+    "@workspace/lib": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "better-auth": "^1.6.9",
+    "date-fns": "^4.1.0",
+    "drizzle-orm": "^0.45.2",
+    "lucide-react": "^1.8.0",
+    "next": "16.1.6",
+    "pg": "^8.20.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tanstack/react-query-devtools": "^5.99.2",
+    "@types/node": "^25.1.0",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "@workspace/eslint-config": "workspace:^",
+    "@workspace/typescript-config": "workspace:*",
+    "drizzle-kit": "^0.31.10",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3"
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}

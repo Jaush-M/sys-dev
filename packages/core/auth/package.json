@@ -1,0 +1,39 @@
+{
+  "name": "@workspace/auth",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    },
+    "./auth/actions/*": {
+      "types": "./dist/auth/actions/*.d.ts",
+      "default": "./dist/auth/actions/*.js"
+    },
+    "./auth/plugins/*": {
+      "types": "./dist/auth/plugins/*.d.ts",
+      "default": "./dist/auth/plugins/*.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "*",
+    "@workspace/typescript-config": "*",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "eslint": "^10.0.2",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "better-auth": "^1.6.2",
+    "jose": "^6.2.2"
+  }
+}
