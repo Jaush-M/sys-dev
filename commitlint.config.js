@@ -18,7 +18,7 @@ module.exports = {
         "wip",
       ],
     ],
-    "scope-enum": [2, "always", ["api", "web", "repo"]],
+    "scope-enum": [2, "always", ["sso", "lms", "sms", "ui", "core", "repo"]],
   },
   prompt: {
     settings: {},
@@ -128,4 +128,4 @@ module.exports = {
       },
     },
   },
-};
+}
