@@ -1,1 +1,1 @@
-export { default } from "@workspace/tailwind-config/postcss";
+export { default } from "@workspace/ui/postcss.config"
