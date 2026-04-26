@@ -102,7 +102,7 @@ export function DashboardLayout({
                     title: "Logout",
                     icon: LogOutIcon,
                     onClick: () => {
-                      alert("Logging you out")
+                      authClient.signOut()
                     },
                   },
                 ],

@@ -1,5 +1,5 @@
-import { createEnv } from "@t3-oss/env-nextjs";
-import { z } from "zod";
+import { createEnv } from "@t3-oss/env-nextjs"
+import { z } from "zod"
 
 export const env = createEnv({
   /**
@@ -26,6 +26,8 @@ export const env = createEnv({
    */
   client: {
     NEXT_PUBLIC_APP_URL: z.string(),
+    NEXT_PUBLIC_LMS_URL: z.string(),
+    NEXT_PUBLIC_SMS_URL: z.string(),
   },
 
   /**
@@ -34,6 +36,8 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+    NEXT_PUBLIC_LMS_URL: process.env.NEXT_PUBLIC_LMS_URL,
+    NEXT_PUBLIC_SMS_URL: process.env.NEXT_PUBLIC_SMS_URL,
 
     DATABASE_URL: process.env.DATABASE_URL,
 
@@ -54,4 +58,4 @@ export const env = createEnv({
    * `SOME_VAR=''` will throw an error.
    */
   emptyStringAsUndefined: true,
-});
+})
