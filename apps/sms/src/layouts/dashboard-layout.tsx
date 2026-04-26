@@ -3,15 +3,15 @@
 import { authClient } from "@/lib/auth/client"
 import { DashboardLayout as PrimitiveDashboardLayout } from "@workspace/ui/layouts/dashboard-layout"
 import {
-  ActivityIcon,
-  BookOpenIcon,
-  InfoIcon,
-  KeyIcon,
+  ClipboardListIcon,
+  ConciergeBellIcon,
+  GraduationCapIcon,
+  Layers2Icon,
   LayoutDashboardIcon,
   LoaderPinwheel,
   LogOutIcon,
-  ShieldIcon,
-  UsersIcon,
+  MailIcon,
+  SirenIcon,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -36,7 +36,7 @@ export function DashboardLayout({
           logoProps: {
             strokeWidth: 1.4,
           },
-          name: "LMS Portal SSO",
+          name: "SMS Portal",
           href: "/",
         },
         navMain: {
@@ -46,47 +46,20 @@ export function DashboardLayout({
               href: "/",
               icon: LayoutDashboardIcon,
             },
-          ],
-        },
-        navLabeled: {
-          items: {
-            "User Management": [
-              {
-                title: "Users",
-                icon: UsersIcon,
-                href: "/users",
-              },
-              {
-                title: "Sessions",
-                icon: ActivityIcon,
-                href: "/sessions",
-              },
-            ],
-            "System Settings": [
-              {
-                title: "OAuth Clients",
-                icon: KeyIcon,
-                href: "/clients",
-              },
-              {
-                title: "Roles & Permissions",
-                icon: ShieldIcon,
-                href: "/roles",
-              },
-            ],
-          },
-        },
-        navSecondary: {
-          items: [
             {
-              title: "Project Documents",
-              icon: BookOpenIcon,
-              onClick: () => alert("Show project documents here"),
+              title: "My Applications",
+              href: "/",
+              icon: ClipboardListIcon,
             },
             {
-              title: "About Project",
-              icon: InfoIcon,
-              onClick: () => alert("About Project Info Here"),
+              title: "Requests",
+              href: "/",
+              icon: Layers2Icon,
+            },
+            {
+              title: "Policies & Procedures",
+              href: "/",
+              icon: SirenIcon,
             },
           ],
         },
@@ -102,7 +75,7 @@ export function DashboardLayout({
                     title: "Logout",
                     icon: LogOutIcon,
                     onClick: () => {
-                      alert("Logging you out")
+                      authClient.signOut()
                     },
                   },
                 ],
