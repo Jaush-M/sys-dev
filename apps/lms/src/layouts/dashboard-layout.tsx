@@ -3,15 +3,21 @@
 import { authClient } from "@/lib/auth/client"
 import { DashboardLayout as PrimitiveDashboardLayout } from "@workspace/ui/layouts/dashboard-layout"
 import {
-  ActivityIcon,
+  BookmarkIcon,
   BookOpenIcon,
-  InfoIcon,
-  KeyIcon,
+  CalendarIcon,
+  ClipboardListIcon,
+  GraduationCapIcon,
   LayoutDashboardIcon,
+  LibraryIcon,
   LoaderPinwheel,
   LogOutIcon,
-  ShieldIcon,
+  MessageCircleIcon,
+  MessageSquareIcon,
+  PencilIcon,
+  SettingsIcon,
   UsersIcon,
+  VideoIcon,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -36,7 +42,7 @@ export function DashboardLayout({
           logoProps: {
             strokeWidth: 1.4,
           },
-          name: "LMS Portal SSO",
+          name: "Learning Management System",
           href: "/",
         },
         navMain: {
@@ -50,43 +56,42 @@ export function DashboardLayout({
         },
         navLabeled: {
           items: {
-            "User Management": [
+            Learning: [
+              { title: "Courses", icon: BookOpenIcon, href: "/courses" },
               {
-                title: "Users",
-                icon: UsersIcon,
-                href: "/users",
+                title: "Assignments",
+                icon: ClipboardListIcon,
+                href: "/assignments",
               },
-              {
-                title: "Sessions",
-                icon: ActivityIcon,
-                href: "/sessions",
-              },
+              { title: "Calendar", icon: CalendarIcon, href: "/calendar" },
             ],
-            "System Settings": [
+            Community: [
+              { title: "Messages", icon: MessageSquareIcon, href: "/messages" },
               {
-                title: "OAuth Clients",
-                icon: KeyIcon,
-                href: "/clients",
+                title: "Discussions",
+                icon: MessageCircleIcon,
+                href: "/discussions",
               },
-              {
-                title: "Roles & Permissions",
-                icon: ShieldIcon,
-                href: "/roles",
-              },
+              { title: "Study Groups", icon: UsersIcon, href: "/study-groups" },
+            ],
+            Resources: [
+              { title: "Library", icon: LibraryIcon, href: "/library" },
+              { title: "Notes", icon: PencilIcon, href: "/notes" },
+              { title: "Bookmarks", icon: BookmarkIcon, href: "/bookmarks" },
             ],
           },
         },
         navSecondary: {
           items: [
             {
-              title: "Project Documents",
-              icon: BookOpenIcon,
-              onClick: () => alert("Show project documents here"),
+              title: "Conferences",
+              icon: VideoIcon,
+              onClick: () => {},
             },
             {
-              title: "About Project",
-              icon: InfoIcon,
-              onClick: () => alert("About Project Info Here"),
+              title: "Settings",
+              icon: SettingsIcon,
+              onClick: () => {},
             },
           ],
         },
@@ -102,7 +107,7 @@ export function DashboardLayout({
                     title: "Logout",
                     icon: LogOutIcon,
                     onClick: () => {
-                      alert("Logging you out")
+                      authClient.signOut()
                     },
                   },
                 ],

@@ -6,6 +6,7 @@ import { Geist_Mono, Inter } from "next/font/google"
 
 import { cn } from "@workspace/ui/lib/utils"
 import { BaseLayout } from "@/layouts/base-layout"
+import { DashboardLayout } from "@/layouts/dashboard-layout"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -37,7 +38,9 @@ export default function RootLayout({
       )}
     >
       <body>
-        <BaseLayout>{children}</BaseLayout>
+        <BaseLayout>
+          <DashboardLayout>{children}</DashboardLayout>
+        </BaseLayout>
       </body>
     </html>
   )
