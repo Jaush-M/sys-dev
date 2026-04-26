@@ -66,7 +66,7 @@ export const auth = betterAuth({
     nextCookies(),
   ],
   advanced: {
-    cookiePrefix: "sms",
+    cookiePrefix: "lms",
     defaultCookieAttributes: {
       httpOnly: true,
       secure: true,
