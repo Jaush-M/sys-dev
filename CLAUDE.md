@@ -1,3 +1,5 @@
+@AGENTS.md
+
 # Claude Code Configuration - RuFlo V3
 
 ## Behavioral Rules (Always Enforced)
