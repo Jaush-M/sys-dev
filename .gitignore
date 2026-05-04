@@ -42,3 +42,4 @@ yarn-error.log*
 
 .swarm/
 .claude-flow/
+.claude/projects/
